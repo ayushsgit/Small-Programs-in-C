@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+double square(double x)
+{
+
+    return x * x;
+
+}
+
+int main()
+{
+    double k;
+    printf("print the number u wanna square:\n");
+    scanf("%lf", &k);
+    double x = square(k);
+
+    printf("sqaure of %lf is %lf ",k ,x);
+
+return 0;
+
+}
