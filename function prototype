@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+void hello(char[] , int); /*function prototype , it tells the compiler that it should not run the code unless the arguments in the given program ie., name and age 
+are written*/
+
+int main()
+{
+
+    char name[] = "kaido";
+    int age = 999;
+
+    hello(name, age);
+
+return 0;
+
+}
+
+
+void hello(char name[] , int age)
+{
+    printf("your name is %s\n", name);
+    printf("your age is %d\n", age);
+}
