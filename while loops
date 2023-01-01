@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{ 
+    
+    char name[25];
+
+    printf("Whats ur name?: ");
+    fgets(name, 25, stdin);
+    name[strlen(name) - 1] = '\0';    //if nothing is entered then it considers it as a null string
+
+  while(strlen(name) == 0)
+  {
+    printf("you did not enter anything\n");
+    printf("Whats ur name?: ");
+    fgets(name, 25, stdin);
+    name[strlen(name) - 1] = '\0';    //if nothing is entered then it considers it as a null string
+  }
+
+    printf("hello %s", name);
+
+
+return 0;
+
+}
