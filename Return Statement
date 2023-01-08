@@ -1,9 +1,8 @@
 #include <stdio.h>
 
-double square(double x)
-{
+double square(double x) //this x is a local value x , like u can also write 'p' here, it would work the same
 
-    return x * x;
+    return x * x;       //then here it would be return p * p;
 
 }
 
