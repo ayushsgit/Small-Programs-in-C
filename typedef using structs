@@ -1,0 +1,27 @@
+# include <stdio.h>
+# include <string.h>
+
+//typedef char user[25];
+
+typedef struct user
+{
+    char name[25];
+    char password[12];
+    int id;
+} user;
+
+int main()
+{
+    user user1 = {"Kaido","sdnfdsd12",1231232133};
+    user user2 = {"Zoro","sdnfdsd12",1222332133};
+
+    printf("%s\n", user1.name);
+    printf("%s\n", user1.password);
+    printf("%d\n\n", user1.id);
+
+    printf("%s\n", user2.name);
+    printf("%s\n", user2.password);
+    printf("%d\n\n", user2.id);
+
+    return 0; 
+}
