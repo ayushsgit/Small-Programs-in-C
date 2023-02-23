@@ -1,0 +1,11 @@
+# include <stdio.h>
+# include <string.h>
+
+typedef char user[25]; //typedef gives the datatype a new name 
+
+int main()
+{
+    user user1[25] = 'Kaido'; // like here the starting user means char user[25] which helps us to shorten time by writting big datatypes again and again
+
+    return 0; 
+}
