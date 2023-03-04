@@ -1,0 +1,64 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main(){
+
+    const int MIN = 1;
+    const int MAX = 100;
+    int guess;
+    int guesses;
+    int answer;
+
+    //uses the current time as a seed
+    srand(time(0));
+
+    //generate a random number between MIN & MAX
+    answer = (rand() % MAX) + MIN;
+
+    do{
+        printf("Guess a number: ");
+        scanf("%d", &guess);
+
+        if(guess > answer){
+            printf("Too High\n");
+        }
+        else if(guess < answer){
+            printf("Too Low\n");
+        }
+        else{
+            printf("CORRECT !!!\n");
+        }
+        guesses ++;
+    }while(guess != answer);
+
+    printf("*****************************\n");
+    printf("Answer is %d\n", answer);
+    printf("Guesses it took: %d\n", guesses);
+    printf("*****************************\n");
+
+    return 0;
+}
+
+
+
+output:
+
+Guess a number: 44
+Too Low
+Guess a number: 77
+Too High
+Guess a number: 55
+Too High
+Guess a number: 47
+Too Low
+Guess a number: 50
+Too Low
+Guess a number: 53
+Too Low
+Guess a number: 54
+CORRECT !!!
+*****************************
+Answer is 54
+Guesses it took: 7
+*****************************
