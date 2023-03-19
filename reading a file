@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main()
+{
+
+    FILE *pF = fopen("C:\\Users\\ayush\\Desktop\\hello.txt", "r");
+    
+    char buffer[266];
+
+    if(pF == NULL)
+    {
+        printf("unable to open file\n");
+    }
+    else{
+    while(fgets(buffer, 266, pF) != NULL)
+    {
+    printf("%s", buffer);
+    }
+    }
+
+    fclose(pF);
+    return 0;
+}
